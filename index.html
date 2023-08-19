@@ -104,6 +104,7 @@
 	RB<br/>
 	WR<br/>
 	WR<br/>
+	TE<br/>
 	FLEX<br/>
 	FLEX<br/>
 	FLEX<br/>
@@ -116,7 +117,7 @@
 Highly customized scoring rules. See below for full details
 
 <h3>Passing</h3>
-Accurate QBs are rewarded. Earn points per completion and lose points for incompletions. Bigger penalties for int and sack, bigger reward for touchdowns.
+Accurate throwing QBs are rewarded. Earn points per completion and lose points for incompletions. Bigger penalties for int and sack, bigger reward for touchdowns.
 <table>
 	<tr>
 		<th>Action</th>
@@ -130,17 +131,17 @@ Accurate QBs are rewarded. Earn points per completion and lose points for incomp
 	</tr>
 	<tr>
 		<td>Completion</td>
-		<td>.5</td>
+		<td class="newfor2023">1.5</td>
 		<td>0</td>
 	</tr>
 	<tr>
 		<td>Incompletion</td>
-		<td>-.5</td>
+		<td class="newfor2023">-1.5</td>
 		<td>0</td>
 	</tr>
 	<tr>
 		<td>Int thrown</td>
-		<td>-4</td>
+		<td class="newfor2023">-10</td>
 		<td>-2</td>
 	</tr>
 	<tr>
@@ -150,10 +151,23 @@ Accurate QBs are rewarded. Earn points per completion and lose points for incomp
 	</tr>
 	<tr>
 		<td>TD thrown</td>
-		<td>6</td>
+		<td class="newfor2023">8</td>
 		<td>4</td>
 	</tr>
 </table>
+
+<br/>
+
+<div class="newfor2023">
+	Changes for 2023:
+	<ul>
+		<li>Points per completion: 0.5 → 1.5</li>
+		<li>Points per incompletion: -0.5 → -1.5</li>
+		<li>Points per INT thrown: -4 → -10</li>
+		<li>Points per passing TD: 6 → 8</li>
+		<li>(Note) Overall, QBs score higher after this change</li>
+	</ul>
+</div>
 
 <h3>Receiving</h3>
 More points per reception, but lose points if you don't catch a target. Rewards efficient receivers.
@@ -165,18 +179,13 @@ More points per reception, but lose points if you don't catch a target. Rewards 
 	</tr>
 	<tr>
 		<td>Point per reception (PPR)</td>
-		<td>1.5</td>
+		<td>2</td>
 		<td>1</td>
 	</tr>
 	<tr>
 		<td>Incompletion</td>
 		<td>-.5</td>
 		<td>0</td>
-	</tr>
-	<tr>
-		<td>Touchdown (Tight end only)</td>
-		<td>14</td>
-		<td>6</td>
 	</tr>
 </table>
 
@@ -199,6 +208,41 @@ Devalues shorter rushes and rewards longer ones. Efficient rushers are rewarded 
 		<td>0</td>
 	</tr>
 </table>
+
+<br/>
+
+<h3>Specific positions</h3>
+<table>
+	<tr>
+		<th>Action</th>
+		<th>Points in BATTLE ROYALE</th>
+		<th>Points for other positions in BATTLE ROYALE</th>
+	</tr>
+	<tr class="newfor2023">
+		<td>QB - Any rushing activity</td>
+		<td><b>NO POINTS</b></td>
+		<td>...</td>
+	</tr>
+	<tr>
+		<td>TE - Touchdowns (receiving and <span class="newfor2023">rushing</span>)</td>
+		<td>14</td>
+		<td>6</td>
+	</tr>
+	<tr class="newfor2023">
+		<td class="newfor2023">TE - Points per reception (PPR)</td>
+		<td class="newfor2023">3</td>
+		<td class="newfor2023">2</td>
+	</tr>
+</table>
+
+<br/>
+<div class="newfor2023">
+	Changes for 2023:
+	<ul>
+		<li>QB - no points for any rushing activity</li>
+		<li>TE - increased rush TD points to 14 (matches rec TD value)</li>
+	</ul>
+</div>
 
 <h3>Passing, rushing, or receiving TD bonus</h3>
 <table>
@@ -229,13 +273,23 @@ These points are enough to make some kick returners into viable starters. Keep i
 		<th>Points in default ESPN</th>
 	</tr>
 	<tr>
-		<td>Punt return yard</td>
-		<td>.17</td>
+		<td>Kickoff/punt return yard</td>
+		<td class="newfor2023">.24</td>
 		<td>0</td>
 	</tr>
 	<tr>
-		<td>Kick return yard</td>
-		<td>.17</td>
-		<td>0</td>
+		<td class="newfor2023">Kickoff/punt return TD</td>
+		<td class="newfor2023">20</td>
+		<td>6</td>
 	</tr>
 </table>
+
+<br/>
+
+<div class="newfor2023">
+	Changes for 2023:
+	<ul>
+		<li>Kickoff/punt return yard: .17 → .24</li>
+		<li>Kickoff/punt return TD: 6 (default) → 20</li>
+	</ul>
+</div>
